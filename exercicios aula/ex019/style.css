@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+    background-color: steelblue;
+    font: bold 30pt arial;
+    color: white;
+    
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    background: white;
+    width: 400px;
+    border-radius: 5px;
+    margin: auto;
+    color: black;
+    font: normal 12pt arial;
+    padding: 15px;
+}
+
+div > input {
+    font: normal 12pt arial;
+    color: black;
+    text-align: center;
+}
+
+footer {
+    font: italic 12pt arial;
+    text-align: center;
+}

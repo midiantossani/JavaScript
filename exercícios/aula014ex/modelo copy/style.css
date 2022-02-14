@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(208, 166, 247);
+    font: normal 20pt arial;
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+section {
+    background: white; 
+    width: 400px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.344);
+}
+
+div {
+    font: normal 10pt arial;
+    text-align: center;
+    padding: 8px;
+}
+
+
+footer {
+    font: italic 18pt arial;
+    text-align: center;
+    color: white;
+}

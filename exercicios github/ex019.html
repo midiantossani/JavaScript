@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplas ações</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        button {padding: 30px; font-size: 1em;}
+    </style>
+</head>
+<body>
+    <h1>Múltiplas ações</h1>
+    <button onclick="acoes()">Clique para Iniciar</button>
+    <section id="res">
+        <h2></h2>
+        <p>Clique no botão acima para começar</p>
+    </section>
+    <script>
+        function acoes(){
+            var v1 = Number(window.prompt('Primeiro valor:'))
+            var v2 = Number(window.prompt('Segundo valor:'))
+            var acoes = Number(window.prompt(`Valores informados: ${v1} e ${v2} \nO que vamos fazer? \n[1] Somar \n[2] Subtrair \n[3] Multiplicar \n[4] Dividir`))
+            var res = document.getElementById('res')
+            res.innerHTML = '<h2>Calculando...</h2>'
+           switch (acoes) {
+               case 1:
+               res.innerHTML += ` ${v1} + ${v2} = <strong>${v1 + v2}</strong>`
+               break
+               case 2: 
+               res.innerHTML += ` ${v1} - ${v2} = <strong>${v1 - v2}</strong>`
+               break
+               case 3:
+               res.innerHTML += ` ${v1} x ${v2} = <strong>${v1* v2}</strong>`
+               break
+               case 4: 
+               res.innerHTML += ` ${v1} / ${v2} = <strong>${v1 / v2}</strong>`
+               break
+               default: 
+               res.innerHTML += ` <p><strong style="color: red">OPÇÃO INVÁLIDA!</strong> Você digitou <strong>${v1}</strong> e <strong>${v2}</strong>, mas não sei o que fazer com eles.</p>`
+               break
+           }
+              
+            
+
+
+
+
+            
+        }
+    </script>
+</body>
+</html>

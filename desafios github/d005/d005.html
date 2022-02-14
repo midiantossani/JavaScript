@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        body {
+            font: normal 15pt arial;
+        }
+
+        button {
+            padding: 20px;
+            font: normal 15pt arial;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="converter()">Converter</button>
+    <section id="res"><p>Clique no botão acima para iniciar.</p></section>
+    <script>
+        function converter (valorM, tipo) {
+            var valorM = Number.parseFloat(prompt('Digite uma distância em metros:'))
+            var km =  valorM / 1000
+            var hm =  valorM / 100
+            var dam = valorM / 10
+            var dm = valorM * 10
+            var cm = valorM * 100
+            var mm = valorM * 1000
+            var res= document.getElementById('res')
+            res.innerHTML = `<p><strong>A distância de ${valorM} metros, equivale a... </strong></p><br>`
+            res.innerHTML += `${km} quilômetros (Km)<br>`
+            res.innerHTML += `${hm} hectômetros (hm)<br>`
+            res.innerHTML += `${dam} decâmetros (dam)<br>`
+            res.innerHTML += `${dm} decímetros (dm)<br>`
+            res.innerHTML += `${cm} centímetros (cm)<br>`
+            res.innerHTML += `${mm} milímetros (mm)<br>`
+            
+          
+           /* if (tipo =='km') return (valorM * 1000)
+            if (tipo =='hm') return  (valorM * 100 )
+            if (tipo =='dam') return (valorM * 10)
+            if (tipo =='dm') return (valorM / 10) 
+            if (tipo == 'cm') return (valorM / 100)
+            if (tipo =='mm') return (valorM  / 1000)
+            return alert('Forneça um tipo válido') */
+        }
+
+       
+        conversor(valorM, tipo)
+    </script>
+</body>
+</html>

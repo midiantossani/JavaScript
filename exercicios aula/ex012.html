@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: thistle;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudos com DOM</h1>
+    <p>Este é um parágrafo</p>
+    <p>Este é outro parágrafo</p>
+    <div id="msg">Clique aqui!</div>
+    <script>
+    var d = window.document.querySelector('div#msg')
+    d.style.color = 'black'
+    d.style.background = 'white'
+    </script>
+</body>
+</html>

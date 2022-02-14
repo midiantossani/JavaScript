@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabuada</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      button {
+        padding: 5px;
+        background-color: green;
+        color: white;
+      }
+      input[type=number] {
+        padding: 3px;
+      }
+      input[type="submit"] {
+        background-color: green;
+        color: white;
+        font-size: 12pt;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Super Tabuada</h1>
+    <p>Escreva um número na caixa a seguir e te mostrarei a tabuada dele.</p>
+    <section>
+        <form action="#" method="get">
+          <p>
+            Número:
+            <input type="number" name="txtn" id="txtn" placeholder="Número" />
+            <input
+              type="submit"
+              value="Tabuada"
+              formaction="javascript:tabuada()"
+            />
+          </p>
+        </form>
+    </section>
+    <section id="res">
+      <p>Preencha os dados acima e aperte o botão</p>
+    </section>
+    
+    <script>
+      function tabuada() {
+        let res = document.getElementById("res");
+        let tab = Number(document.getElementById("txtn").value);
+
+        res.innerHTML += `<h2>Tabuada de ${tab}</h2>`;
+        for (var c = 1; c <= 10; c++) {
+          res.innerHTML += `${tab} x ${c} = <strong>${tab * c}</strong><br>`;
+        }
+      }
+    </script>
+  </body>
+</html>

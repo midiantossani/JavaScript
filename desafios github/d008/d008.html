@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            padding: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Desconto</h1>
+    <button onclick="desconto()">Desconto de 10%</button>
+    <section id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+    <script>
+        function desconto(){
+            var prod = window.prompt('Qual é o produto que você está comprando?')
+            var preco = parseFloat(window.prompt(`Qual é o preço de ${prod}`))
+            var res = document.getElementById('res')
+            var desc = preco * 0.10
+            res.innerHTML = `<h2>Calculando desconto de 10% para ${prod}</h2>`
+            res.innerHTML += `<p>O preço original era R$ ${preco.toFixed(2).replace('.', ',')}</p>`
+            res.innerHTML += `<p>Você acaba de ganhar <strong style="color: red">R$ ${desc.toFixed(2).replace('.', ',')}</strong> de desconto (-10%)</p>`
+            res.innerHTML += `<p>No fim, você vai pagar <strong style="color: red">R$ ${(preco - desc).toFixed(2).replace('.', ',')}</strong> no produto <strong>${prod}</strong></p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> UR$</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            padding: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ -> US$</h1>
+    <button onclick="converter()">Converter</button>
+    <section id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+    <script>
+        var cotaçãoDolarAtual = parseFloat(window.prompt('Antes de mais nada. Quanto está a cotação do dólar agora?'))//5,20
+        function converter(){
+            var carteira = parseFloat(window.prompt('Quantos R$ você tem na carteira?'))
+            var conversão = carteira * cotaçãoDolarAtual
+            var res = document.getElementById('res')
+            res.innerHTML = `<h2>Com ${carteira.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})} você conseguirá comprar em dólares...</h2>`
+            res.innerHTML += `<p>${conversão.toLocaleString('EN-US', { style: 'currency', currency: 'USD'})}</p>`
+
+        }
+    </script>
+</body>
+</html>
